@@ -173,12 +173,15 @@ li a:hover, li a:active, .active {
 /*Styling Home page handwriting text*/
 #sticky{
 	height:300vh;
+	/* text-align: center; */
 }
-#svg4540{
+#sticky svg{
 	position:fixed;
+	left: 50%;
+	transform: translateX(-50%);
 	top: 20%;
 	height: 60%;
-	width: 100%;
+	width: 80%;
 	z-index: -1;
 }
 

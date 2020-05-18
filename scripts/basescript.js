@@ -9,7 +9,7 @@ $(document).ready(function(){
 	
 	var $doc = $(document),
     $win = $(window),
-    $svg = $('#svg4540').drawsvg(),
+    $svg = $('#sticky svg').drawsvg();
     max = $doc.height() - $win.height();
 	
 	$win.on('scroll', function() {
@@ -17,10 +17,13 @@ $(document).ready(function(){
 		$svg.drawsvg('progress', p);
 		$('.container').css('bottom', 10 - p*50 + '%');	//Bring arrows down
 	});
+	$('#rinat').rippleEffect();
 	$('#sticky').ripples({});
 });
 
-
+// function proba(){
+// 	console.log('Proba na');
+// }
 /* Functions starts below */
 
 /* Define variable as global as we use in many functions */
