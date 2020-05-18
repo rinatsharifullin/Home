@@ -1,0 +1,355 @@
+/* Font importing from Google font */
+@import url('https://fonts.googleapis.com/css?family=Rufina&display=swap');
+
+/* Styling body */
+body{
+	margin:0;		
+	font-family: "Rufina", serif;	/* Define font */
+	font-size:20px;
+	line-height:1.5;
+	background-image:url("../images/backgroung.png");	/* Background tile image */
+	background-attachment: fixed;
+}
+
+/* Styling logo */
+#logo{
+	position: fixed;
+	top: 8px;
+	left: 20px;
+	width: 48px;
+	height: 46px;
+	z-index: 1;
+	background: url(../images/r.svg) no-repeat center ;
+	transition: .5s;
+}
+#logo:hover{
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	border-radius: 5px;
+
+}
+/* Styling image container */
+#rinat{
+	position: fixed;
+	right: 50%;
+	transform: translateX(50%);
+	top: 10vh;
+	z-index: 1;
+}
+#rinat img:hover{
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	border-radius: 50%;
+}
+#rinat img{
+	transition: .5s;
+	width: calc(10vw + 100px);
+	height: calc(10vw + 100px);
+	border-radius: 50%;
+}
+
+/* Style navigation hamburger button */
+.hamburger {
+	z-index: 5;			/* Stay on top of menu background */
+    position: fixed;	/* Position container where you want */
+    top: 20px;
+    right: 20px;
+    outline: none;		/* Hide blue square around button on active state */
+    cursor: pointer;	/* Pointer - hand */
+    background-color: transparent;	/* Disable button colour */
+    border: 0;	/* Disable button border */
+    
+}
+/* Button hover change opacity of all content to 0.5 */
+.hamburger:hover, .hamburger.is-active:hover {
+    opacity: 0.5;
+}
+/* Lines on X states */
+.is-active .hamburger-inner,
+.is-active .hamburger-inner::before,
+.is-active .hamburger-inner::after,
+/* Lines on hover on = state same width 40px */
+.hamburger:hover .hamburger-inner, 
+.hamburger:hover .hamburger-inner::before {
+    width: 40px;
+}
+
+/* Style beheviar of X on hover */
+.is-active:hover .hamburger-inner{
+    transform: rotate(-45deg);	/* Rotate -45deg on hover */
+    transform-origin: 50% 50%;	/* Make stay in center */
+}
+/* Container for lines */
+.hamburger>span {
+    width: 40px;			/* Size box */
+    height: 24px;
+    display: inline-block;	/* Make sizes work */
+}
+/* Middle line */
+.hamburger-inner {
+    top: 50%;			/* Position middle vertical */
+    margin-top: -2px;	/* Offset height of line 4px*/ 
+}
+/* Define content of pseudo elements */
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+}
+/* Style all lines */
+.hamburger .hamburger-inner, .hamburger .hamburger-inner::before, .hamburger .hamburger-inner::after {
+    display: block;				/* display on top each other */
+    height: 4px;				/* height of each line */
+    background-color: #000;		/* Colour lines */
+    border-radius: 4px;			/* Make line sides round */
+    position: absolute;			/* Position them properly */
+    transition:  all 0.5s cubic-bezier(0.19, 1, 0.22, 1);	/* transition grow lines and spin */
+    right: 0;					/* Right align lines */
+}
+/* Style top line */
+.hamburger-inner::before{
+    width: 20px;	/* Initial width 20px */
+    top: -10px;		/* 10px higher of middle */
+}
+/* Middle line */
+.hamburger-inner{
+    width: 30px;	/* Initial line wigth */
+}
+/* Bottom line styling */
+.hamburger-inner::after{
+    width: 40px;	/* Line width */
+    bottom: -10px;	/* Position under middle line */
+}
+/* Middle line in X position */
+.is-active .hamburger-inner {
+    transform: rotate(45deg);	/* Rotate 45deg when clicked */
+}
+/* Top line styling */
+.is-active .hamburger-inner::before {
+    top: 0;		/* Move to top */
+    opacity: 0; /* Hide */
+}
+/* Bottom line styling */
+.is-active .hamburger-inner::after {
+    bottom: 0;					/* Move to bottom */
+    transform: rotate(90deg); 	/* Rotate to \ position */
+}
+/* Styling navigation */
+ul{
+	position: fixed;		/* Stay on top of all content in fixed position*/
+	display:none; 			/* Hide nav menu */
+	list-style: none; 		/* Remove dots in front of li */
+	padding:5vh 0 0 0;				/* Hide horizontal control */
+	margin: 0 ;				/* Not necessary, make compact */
+	width: 100%;			/* Occupy all document width */
+	z-index: 3;				/* Stay on top of page content */
+}
+/* Style nav menu background */
+ul::after{
+	content: "";		/* Necessary define content */
+	position: fixed;	/* Serve size to occupy all page */
+	top: 0;				/* Stretch background to whole screen */
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(236, 236, 236);	/* background-color similar to tiles */
+	z-index: -1;								/* Do not hide menu */
+}
+/* Style each menu line */
+li{
+	text-align:center;				/* Position in the middle */
+	font-size: calc(2vh + 20px);	/* Responsive font size */
+	font-weight: 777;				/* Bold font */
+	text-transform:uppercase;
+}
+/* Style links */
+li a:link, li a:visited{
+	color:#707070;				  /* Colours of font */
+	text-decoration:none;			/* No underline */
+}
+/* Style active link state same as hover*/
+li a:hover, li a:active, .active {
+	color:#000;						/* Font colour */
+	border-bottom:2px solid red;	/* Style border */
+}
+
+
+/*Styling Home page handwriting text*/
+#sticky{
+	height:300vh;
+}
+#svg4540{
+	position:fixed;
+	top: 20%;
+	height: 60%;
+	width: 100%;
+	z-index: -1;
+}
+
+
+
+/* Footer styling */
+footer{
+	text-align: center; 	/* aling icons in the middle */
+	padding-bottom: 5vh;
+}
+/* Styling footer social media icons */
+footer div a {
+	width:50px;
+	height:50px;
+	display:inline-block;
+	margin:0 1vw;
+	border-radius: 50%;
+	padding: 6px;
+	box-sizing: border-box;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	background: linear-gradient(0deg, #ddd, #fff);
+	transition: .5s;
+	
+}
+
+footer div a:hover {
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+footer div a svg {
+	width: 100%;
+	height:100%;
+	display:block;
+	background: linear-gradient(0deg, #fff, #ddd);
+	border-radius: 50%;
+	line-height: calc(60px - 12px);
+	font-size:24px;
+	fill: none;
+	stroke:black;
+	stroke-width:5;
+
+}
+
+footer div a:nth-child(1) svg:hover {
+	fill: #00aced;
+}
+footer div a:nth-child(2) svg:hover {
+	fill: #007bb6;
+}
+footer div a:nth-child(3) svg:hover {
+	fill: #dd4b39;
+}
+footer div a:nth-child(4) svg:hover {
+	fill: #3b5998;
+}
+footer div a:nth-child(5) svg:hover {
+	fill: #e4405f;
+}
+
+/* Styling scroll down animated arrow */
+.container {
+	position: fixed;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 24px;
+	height: 24px;
+}
+
+.chevron {
+	position: absolute;
+	width: 28px;
+	height: 8px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+	
+}
+
+.chevron:first-child {
+	animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+	animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 51%;
+	background: rgb(0, 0, 0);
+}
+
+.chevron:before {
+	left: 0;
+	transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+	right: 0;
+	width: 50%;
+	transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+	25% {
+	opacity: 1;
+
+	}
+	33% {
+	opacity: 1;
+	transform: translateY(30px);
+	}
+	67% {
+	opacity: 1;
+	transform: translateY(40px);
+	}
+	100% {
+	opacity: 0;
+	transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+	}
+}
+
+
+
+
+
+/* Styling for tablet and desktop versions */
+@media only screen and (min-width: 360px){
+	/* Styling logo */
+	#logo{
+		top: 10px;
+		left: 20px;
+		width: 198px;
+		height: 46px;
+		background: url(../images/logo.svg) no-repeat center;
+	}
+}
+
+
+
+@media only screen and (min-width: 768px){
+	
+	/* Styling image container */
+	#rinat{
+		transform: translateX(0);
+		right: 0;
+		top: 15vh;
+	}
+	#rinat img{
+		width: 20vw;
+		height: 20vw;
+	}
+
+	/*Styling Home page handwriting text*/
+	#svg4540{
+		position:fixed;
+		top: 0;
+		width: 80%;
+	}
+
+}
+
+
+
+@media only screen and (min-width: 1366px){
+	
+	
+}
+
