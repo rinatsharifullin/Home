@@ -11,6 +11,7 @@ $(document).ready(function(){
     $win = $(window),
     $svg = $('#sticky svg').drawsvg();
     max = $doc.height() - $win.height();
+	// $svg.drawsvg('animate');
 	
 	$win.on('scroll', function() {
 		var p = $win.scrollTop() / max;
@@ -18,7 +19,19 @@ $(document).ready(function(){
 		$('.container').css('bottom', 10 - p*50 + '%');	//Bring arrows down
 	});
 	$('#rinat').rippleEffect();
-	$('#sticky').ripples({});
+	// $('#sticky').ripples({});
+
+	$(".chevron").click(function() {
+		$('html, body').animate({
+			scrollTop: $("footer div").offset().top
+		}, 5000);
+	});
+	$(".fa-arrow-up").click(function() {
+		$('html, body').animate({
+			scrollTop: $("body").offset().top
+		}, 3000);
+	});
+	
 });
 
 // function proba(){
