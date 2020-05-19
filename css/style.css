@@ -220,7 +220,7 @@ footer div a svg {
 	font-size:24px;
 	fill: none;
 	stroke:black;
-	/* stroke-width:1; */
+	fill: #70707050;
 
 }
 
@@ -249,7 +249,9 @@ footer div a:nth-child(5) svg:hover {
 	width: 28px;
 	height: 70px;
 	cursor: pointer;
+	
 }
+
 
 .chevron {
 	position: absolute;
@@ -258,8 +260,8 @@ footer div a:nth-child(5) svg:hover {
 	opacity: 0;
 	transform: scale3d(0.5, 0.5, 0.5);
 	animation: move 3s ease-out infinite;
-	z-index: -1;
 }
+
 
 .chevron:first-child {
 	animation: move 3s ease-out 1s infinite;
@@ -269,6 +271,7 @@ footer div a:nth-child(5) svg:hover {
 	animation: move 3s ease-out 2s infinite;
 }
 
+
 .chevron:before,
 .chevron:after {
 	content: ' ';
@@ -276,7 +279,12 @@ footer div a:nth-child(5) svg:hover {
 	top: 0;
 	height: 100%;
 	width: 51%;
-	background: rgb(0, 0, 0);
+	background: #70707050;
+	transition: background-color 1s ease;
+}
+.container:hover .chevron:before,
+.container:hover .chevron:after {
+	background-color: #707070;
 }
 
 .chevron:before {
@@ -289,6 +297,7 @@ footer div a:nth-child(5) svg:hover {
 	width: 50%;
 	transform: skew(0deg, -30deg);
 }
+
 
 @keyframes move {
 	25% {
@@ -317,6 +326,14 @@ footer div a:nth-child(5) svg:hover {
 	bottom: 2vh;
 	right: 2vh;
 	cursor: pointer;
+}
+.fa-arrow-up path{
+	fill:#70707050;
+	transition: fill 1s ease;
+
+}
+.fa-arrow-up:hover path{
+	fill:#707070;
 }
 
 
