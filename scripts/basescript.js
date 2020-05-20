@@ -17,6 +17,15 @@ $(document).ready(function(){
 		var p = $win.scrollTop() / max;
 		$svg.drawsvg('progress', p);
 		$('.container').css('bottom', 10 - p*50 + '%');	//Bring arrows down
+		
+		//Calculate position of top window from 0 to 10 for arrow
+        var position =Math.round( (10/ ($(document).height() - $(window).height()))*$(document).scrollTop());
+        //If position over 2, show arrow
+        if (position > 2){
+            $('.fa-arrow-up').css('right', 30+'px')          //Show arrow
+        }else{
+            $('.fa-arrow-up').css('right', -50+'px')         //Hide arrow
+        }
 	});
 	$('#rinat').rippleEffect();
 	// $('#sticky').ripples({});
@@ -26,11 +35,30 @@ $(document).ready(function(){
 			scrollTop: $("footer div").offset().top
 		}, 5000);
 	});
+	// Set up arrow for transition
+	$('.fa-arrow-up').css({ 'position': 'fixed', 'right': -50 +'px', 'bottom': 30+'px', 'transition': 'right ease 1s'});
+	// Arrow on click scroll to top
 	$(".fa-arrow-up").click(function() {
 		$('html, body').animate({
 			scrollTop: $("body").offset().top
 		}, 3000);
 	});
+	var verticalPositionUp = '50% 0%';
+	var verticalPositionDown = '50% 100%'
+	// Animate image in container on hover
+	$('.inner').hover(function(){
+		verticalPositionDown = $(this).css('background-position');
+		// console.log('verticalPositionUp ' + verticalPositionUp);
+		$(this).css('background-position',verticalPositionDown);
+		$(this).toggleClass('inner-img-up inner-img-down');
+		
+	}, function(){
+		verticalPositionUp = $(this).css('background-position');
+		// console.log('verticalPositionDown ' + verticalPositionDown);
+		$(this).css('background-position',verticalPositionUp);
+		$(this).toggleClass('inner-img-down inner-img-up')}
+	);
+
 	
 });
 

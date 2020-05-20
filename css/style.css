@@ -26,8 +26,21 @@ body{
 #logo:hover{
 	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
 	border-radius: 5px;
-
 }
+/* Page heading animation */
+#pagename{
+	text-align: center;
+	opacity:0;
+	font-size: 30px;
+	animation: fill 1s ease forwards;
+	padding: 20px 0;
+}
+
+@keyframes fill{
+	100%{opacity:1;
+		font-size: 40px;}
+}
+
 /* Styling image container */
 #rinat{
 	position: fixed;
@@ -322,9 +335,9 @@ footer div a:nth-child(5) svg:hover {
 .fa-arrow-up{
 	width: 5vh;
 	height: 5vh;
-	position: absolute;
-	bottom: 2vh;
-	right: 2vh;
+	position: fixed;
+	bottom: 30px;
+	right: -50px;
 	cursor: pointer;
 }
 .fa-arrow-up path{
@@ -336,7 +349,48 @@ footer div a:nth-child(5) svg:hover {
 	fill:#707070;
 }
 
-
+/* Styling work page */
+/* Flex container for all work sections */
+.workwraper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+/* Outer conteiner for image and text */
+.outer{
+	flex-basis: 100%;
+	height: 50vh;
+	background-color: #707070;
+	overflow: hidden;
+}
+/* Inner container for long image */
+.inner{
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../images/wedding.jpg) no-repeat;
+	/* background-position: 50% 0%; */
+	background-size: 100%;
+}
+/* Class adding on hover by JS */
+.inner-img-up{
+	animation: image-up 3s linear forwards;
+}
+.inner-img-down{
+	animation: image-down 3s linear forwards;
+}
+/* Animate image scroll up */
+@keyframes image-up {
+	100% {
+		background-position: 50% 100%;
+	}
+}
+/* Animate image scroll down */
+@keyframes image-down {
+	100% {
+		background-position: 50% 0%;
+	}
+}
 
 /* Styling for tablet and desktop versions */
 @media only screen and (min-width: 360px){
