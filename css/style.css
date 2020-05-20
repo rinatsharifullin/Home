@@ -173,12 +173,12 @@ li{
 	text-transform:uppercase;
 }
 /* Style links */
-li a:link, li a:visited{
+a:link,  a:visited{
 	color:#707070;				  /* Colours of font */
 	text-decoration:none;			/* No underline */
 }
 /* Style active link state same as hover*/
-li a:hover, li a:active, .active {
+a:hover,  a:active, .active {
 	color:#000;						/* Font colour */
 	border-bottom:2px solid red;	/* Style border */
 }
@@ -231,9 +231,8 @@ footer div a svg {
 	border-radius: 50%;
 	line-height: calc(60px - 12px);
 	font-size:24px;
-	fill: none;
 	stroke:black;
-	fill: #70707050;
+	fill: #707070;
 
 }
 
@@ -251,6 +250,12 @@ footer div a:nth-child(4) svg:hover {
 }
 footer div a:nth-child(5) svg:hover {
 	fill: #e4405f;
+}
+footer div a:nth-child(6) svg:hover {
+	fill: #000;
+}
+footer div a:nth-child(7) svg:hover {
+	fill: #ec8b5e;
 }
 
 /* Styling scroll down animated arrow */
@@ -292,12 +297,12 @@ footer div a:nth-child(5) svg:hover {
 	top: 0;
 	height: 100%;
 	width: 51%;
-	background: #70707050;
+	background-color: #707070;
 	transition: background-color 1s ease;
 }
 .container:hover .chevron:before,
 .container:hover .chevron:after {
-	background-color: #707070;
+	background-color: #000;
 }
 
 .chevron:before {
@@ -341,12 +346,12 @@ footer div a:nth-child(5) svg:hover {
 	cursor: pointer;
 }
 .fa-arrow-up path{
-	fill:#70707050;
+	fill:#707070;
 	transition: fill 1s ease;
 
 }
 .fa-arrow-up:hover path{
-	fill:#707070;
+	fill:#000;
 }
 
 /* Styling work page */
@@ -359,19 +364,71 @@ footer div a:nth-child(5) svg:hover {
 /* Outer conteiner for image and text */
 .outer{
 	flex-basis: 100%;
-	height: 50vh;
-	background-color: #707070;
+	height: auto;
 	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	transition: flex-basis ease 1s;
+	box-shadow: 2px 2px 5px rgba(32,33,36,0.28);
+	background-color: white;
+	text-align: center;
+	margin: 2vh 1vw;
+}
+/* Style active link state same as hover*/
+.outer a:hover, .outer a:active{
+	border-bottom:none;	
+}
+/* Date display styling */
+.date{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.date p{
+	margin: 0;
+	display: block;
+	padding: 5px;
+	background-color: #ccc;
 }
 /* Inner container for long image */
 .inner{
+	position: relative;
 	width: 100%;
-	height: 70%;
+	height: 40vh;
 	overflow: hidden;
-	background: url(../images/wedding.jpg) no-repeat;
-	/* background-position: 50% 0%; */
+	border: 1px solid #ccc;
+}
+/* Adding wedding image */
+#wedding{
+	background: url(../images/wedding360.jpg) no-repeat;
 	background-size: 100%;
 }
+/* Adding fullerton image */
+#fullerton{
+	background: url(../images/fullerton360.jpg) no-repeat;
+	background-size: 100%;
+}
+/* Adding darkshine image */
+#darkshine{
+	background: url(../images/darkshine360.jpg) no-repeat;
+	background-size: 100%;
+}
+/* Adding developer path image */
+#developer{
+	background: url(../images/developer360.jpg) no-repeat;
+	background-size: 100%;
+}
+/* Adding clickme image */
+#clickme{
+	background: url(../images/clickme.png) no-repeat;
+	background-size: 100%;
+}
+/* Adding finkglas image */
+#finkglas{
+	background: url(../images/finkglas360.jpg) no-repeat;
+	background-size: 100%;
+}
+
 /* Class adding on hover by JS */
 .inner-img-up{
 	animation: image-up 3s linear forwards;
@@ -402,6 +459,31 @@ footer div a:nth-child(5) svg:hover {
 		height: 46px;
 		background: url(../images/logo.svg) no-repeat center;
 	}
+	/* Adding wedding image */
+	#wedding{
+		background: url(../images/wedding.jpg) no-repeat;
+		background-size: 100%;
+	}
+	/* Adding fullerton image */
+	#fullerton{
+		background: url(../images/fullerton.jpg) no-repeat;
+		background-size: 100%;
+	}
+	/* Adding darkshine image */
+	#darkshine{
+		background: url(../images/darkshine.jpg) no-repeat;
+		background-size: 100%;
+	}
+	/* Adding developer path image */
+	#developer{
+		background: url(../images/developer.jpg) no-repeat;
+		background-size: 100%;
+	}
+	/* Adding finkglas image */
+	#finkglas{
+		background: url(../images/finkglas.jpg) no-repeat;
+		background-size: 100%;
+	}
 }
 
 
@@ -429,13 +511,20 @@ footer div a:nth-child(5) svg:hover {
 		width: 60%;
 		top: 50%;
 	}
+	/* Outer conteiner for image and text */
+	.outer{
+		flex-basis: 45%;
+	}
 
 }
 
 
 
 @media only screen and (min-width: 1366px){
-	
+	/* Outer conteiner for image and text */
+	.outer{
+		flex-basis: 30%;
+	}
 	
 }
 
