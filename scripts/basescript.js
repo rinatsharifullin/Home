@@ -122,7 +122,17 @@ $(document).ready(function(){
             petsShow();
         },1100);
     });
-	
+
+    // Append youtube video on image click
+    $('#beach').click(function(e){
+        $(this).append('<iframe src="https://www.youtube.com/embed/RCkGciuD8Eo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    });
+	$('#ksjusha').click(function(e){
+        $(this).append('<iframe  src="https://www.youtube.com/embed/RTDy4XLsQVI"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    });
+	$('#cycle').click(function(e){
+        $(this).append('<iframe  src="https://www.youtube.com/embed/k7JXixWT94o"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    });
 });
 
 // Script for about page gallery

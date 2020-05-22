@@ -375,10 +375,7 @@ footer div a:nth-child(7) svg:hover {
 	text-align: center;
 	margin: 2vh 1vw;
 }
-/* Style active link state same as hover*/
-.outer a:hover, .outer a:active{
-	border-bottom:none;	
-}
+
 /* Date display styling */
 .date{
 	position: absolute;
@@ -451,27 +448,42 @@ footer div a:nth-child(7) svg:hover {
 }
 
 /* Styling Gallery of about page */
-#control h3{
-    cursor: pointer;
-    transition: all ease 0.5s;
+.control h3 {
+	cursor: pointer;
+	width:100px;
+	height:50px;
+	display:inline-block;
+	margin:0 1vw;
+	border-radius: 10px;
+	padding: 6px;
+	box-sizing: border-box;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	background: linear-gradient(0deg, #ddd, #fff);
+	transition: .5s;
+	
 }
-#control h3:hover, .selected{
-    box-shadow: 15px 15px 7px rgba(222, 222, 222, 0.85);
+.control h3:hover, .selected{
+	/* box-shadow: 15px 15px 7px rgba(222, 222, 222, 0.85); */
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     color: orangered;
 }
-#control{
-    display: flex;
-    justify-content: space-evenly;
+
+.control{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
 }
 #wraper{
     overflow: hidden;
-    line-height: 0;
+	line-height: 0;
+	padding: 3vh 0;
 }
 #wraper img{
-    width: 32vw;
-    height: 32vw;
+    width: 49vw;
+    height: 49vw;
     object-fit: cover;
-    transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	cursor: pointer;
 }
 .imgHover{
     transform: scale(1.2);  
@@ -480,55 +492,130 @@ footer div a:nth-child(7) svg:hover {
     display: none;
 }
 .all{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "travel1 cycling1 pets3"
-                        "cycling2 pets4 travel6"
-                        "pets5 travel8 cycling3"
-                        "travel5 travel3 pets2"
-                        "travel7 pets6 travel2"
-                        "travel4 pets1 cycling4";
+	display: grid;
+	display: -ms-grid;
+	grid-template-columns: 1fr 1fr;
+	-ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-areas: "travel1 cycling1 "
+                        "cycling2 pets4 "
+                        "pets5 travel8 "
+                        "travel5 travel3 "
+                        "travel7 pets6 "
+						"travel4 pets1 "
+						"pets3 travel6"
+						"cycling3 pets2"
+						"travel2 cycling4";
 }
 .travelWraper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "travel1 travel2 travel3" "travel4 travel5 travel6" "travel7 travel8 .";
+	display: grid;
+	display: -ms-grid;
+	grid-template-columns: 1fr 1fr ;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-areas: "travel1 travel2 " 
+						"travel4 travel5 " 
+						"travel7 travel8 "
+						"travel3 travel6";
 }
 .petsWraper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "pets1 pets2 pets3" "pets4 pets5 pets6";
+	display: grid;
+	display: -ms-grid;
+	grid-template-columns: 1fr 1fr ;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-areas: "pets1 pets2 " 
+						"pets4 pets5 " 
+						"pets3 pets6";
 }
 .cyclingWraper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "cycling1 cycling2 cycling3" "cycling4 . .";
+	display: grid;
+	display: -ms-grid;
+	grid-template-columns: 1fr 1fr ;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-areas: "cycling1 cycling2 " 
+						"cycling4 cycling3";
 }
 .travel, .pets, .cycling{
     transition: all ease 1s;
     overflow: hidden;
 }
-#travel1{grid-area: travel1;}
-#travel2{grid-area: travel2;}
-#travel3{grid-area: travel3;}
-#travel4{grid-area: travel4;}
-#travel5{grid-area: travel5;}
-#travel6{grid-area: travel6;}
-#travel7{grid-area: travel7;}
-#travel8{grid-area: travel8;}
 
 
-#pets1{grid-area: pets1;}
-#pets2{grid-area: pets2;}
-#pets3{grid-area: pets3;}
-#pets4{grid-area: pets4;}
-#pets5{grid-area: pets5;}
-#pets6{grid-area: pets6;}
 
-#cycling1{grid-area: cycling1;}
-#cycling2{grid-area: cycling2;}
-#cycling3{grid-area: cycling3;}
-#cycling4{grid-area: cycling4;}
+#travel1{grid-area: travel1;
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
+}
+#travel2{grid-area: travel2;
+	-ms-grid-column: 3;
+	-ms-grid-row: 5;
+}
+#travel3{grid-area: travel3;
+	-ms-grid-column: 2;
+	-ms-grid-row: 4;
+}
+#travel4{grid-area: travel4;
+	-ms-grid-column: 1;
+	-ms-grid-row: 6;
+}
+#travel5{grid-area: travel5;
+	-ms-grid-column: 1;
+	-ms-grid-row: 4;
+}
+#travel6{grid-area: travel6;
+	-ms-grid-column: 3;
+	-ms-grid-row: 2;
+}
+#travel7{grid-area: travel7;
+	-ms-grid-column: 1;
+	-ms-grid-row: 5;
+}
+#travel8{grid-area: travel8;
+	-ms-grid-column: 2;
+	-ms-grid-row: 3;
+}
+
+
+#pets1{grid-area: pets1;
+	-ms-grid-column: 2;
+	-ms-grid-row: 6;
+}
+#pets2{grid-area: pets2;
+	-ms-grid-column: 3;
+	-ms-grid-row: 4;
+}
+#pets3{grid-area: pets3;
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;
+}
+#pets4{grid-area: pets4;
+	-ms-grid-column: 2;
+	-ms-grid-row: 2;
+}
+#pets5{grid-area: pets5;
+	-ms-grid-column: 1;
+	-ms-grid-row: 3;
+}
+#pets6{grid-area: pets6;
+	-ms-grid-column: 2;
+	-ms-grid-row: 5;
+}
+
+
+#cycling1{grid-area: cycling1;
+	-ms-grid-column: 2;
+	-ms-grid-row: 1;
+}
+#cycling2{grid-area: cycling2;
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+}
+#cycling3{grid-area: cycling3;
+	-ms-grid-column: 3;
+	-ms-grid-row: 3;
+}
+#cycling4{grid-area: cycling4;
+	-ms-grid-column: 3;
+	-ms-grid-row: 6;
+}
 
 .modal {
     display: none; /* Hidden by default */
@@ -567,8 +654,154 @@ footer div a:nth-child(7) svg:hover {
     cursor: pointer;
 }
 
+/* Styling youtube video */
+.youtube {
+	display: inline-block;
+    position: relative;
+	height: 55.7vw;
+	width: 99vw;
+	cursor: pointer;
+	margin: 3vh 0;
+}
+.youtube iframe, .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.youtube img{
+	width: 100%;
+	height: 100%;
+}
+/* Styling main wrapper for form and map */
+main{
+	display: flex;	
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+/*Contact form styling*/
+.container-form {
+	display: inline-block;
+	width:90%;
+	height: 610px;
+	border:1px solid #ccc;
+	border-radius:15px;
+	box-shadow: 2px 2px 5px rgba(32,33,36,0.28);
+	padding:1% 1%;
+	margin: 2vh 2vw;
+	background-color:white;
+	box-sizing: border-box;
+	text-align: center;
+}
+.container-form:hover {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+label:not(:nth-child(5))::after{
+	content: " *";
+	color: red;
+}
+textarea{
+	height: 200px;
+}
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: none;
+	transition: box-shadow 1s ease;
+}
+input[type=text]:hover, select:hover, textarea:hover,
+input[type=text]:focus, select:focus, textarea:focus{
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+input[type=submit] {
+	background-color: rgba(32,33,36,0.28);
+	color: black;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 1s ease;
+}
+
+input[type=submit]:hover {
+	background-color: gray;
+	color:white;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+
+
+/* Styling map */
+.map {
+	display: inline-block;
+    position: relative;
+	height: 50vh;
+	width: 90%;
+	cursor: pointer;
+	margin: 2vh 2vw;
+	border:1px solid #ccc;
+	border-radius:15px;
+	box-shadow: 2px 2px 5px rgba(32,33,36,0.28);
+}
+.map:hover{
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+.map iframe{
+	border-radius: 15px;
+}
+
 /* Styling for tablet and desktop versions */
 @media only screen and (min-width: 360px){
+	/* Styling youtube video */
+	.youtube {
+		height: 25.9vw;
+		width: 46vw;
+	}
+	/* Styling gallery */
+	#wraper img{
+		width: 32vw;
+		height: 32vw;
+	}
+	.all{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-template-areas: "travel1 cycling1 pets3"
+							"cycling2 pets4 travel6"
+							"pets5 travel8 cycling3"
+							"travel5 travel3 pets2"
+							"travel7 pets6 travel2"
+							"travel4 pets1 cycling4";
+	}
+	.travelWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-template-areas: "travel1 travel2 travel3" "travel4 travel5 travel6" "travel7 . travel8";
+	}
+	.petsWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-template-areas: "pets1 pets2 pets3" "pets4 pets5 pets6";
+	}
+	.cyclingWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-template-areas: "cycling1 cycling2 cycling3" ". cycling4  .";
+	}
 	/* Styling logo */
 	#logo{
 		top: 10px;
@@ -608,6 +841,53 @@ footer div a:nth-child(7) svg:hover {
 
 @media only screen and (min-width: 768px){
 	
+	/* Styling contact page form and map */
+	.container-form, .map{
+		width: 75%;
+		transition: all 1s ease;
+	}
+	/* Styling youtube video */
+	.youtube {
+		height: 18vw;
+		width: 32vw;
+	}
+	/* Styling gallery */
+	#wraper img{
+		width: 24vw;
+		height: 24vw;
+	}
+	.all{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "travel1 cycling1 pets3 cycling4"
+							"cycling2 pets4 travel6 pets1"
+							"pets5 travel8 cycling3 travel4"
+							"travel5 travel3 pets2 travel2"
+							". travel7 pets6 .";
+	}
+	.travelWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "travel1 travel2 travel3 travel8" "travel4 travel5 travel6 travel7";
+	}
+	.petsWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "pets1 pets2 pets3 pets6" ". pets4 pets5 .";
+	}
+	.cyclingWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "cycling1 cycling2 cycling3 cycling4";
+	}
 	/* Styling image container */
 	#rinat{
 		transform: translateX(0);
@@ -639,6 +919,53 @@ footer div a:nth-child(7) svg:hover {
 
 
 @media only screen and (min-width: 1366px){
+	/* Main container */
+	main{
+		flex-flow: row;	
+	}
+	/* Styling contact page form and map */
+	.container-form, .map{
+		width: 40%;
+	}
+	.map{
+		height: 610px;
+	}
+	/* Styling gallery */
+	#wraper img{
+		width: 19vw;
+		height: 19vw;
+	}
+	.all{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: "travel1 cycling1 pets3 cycling4 pets6"
+							"cycling2 pets4 travel6 pets1 travel7"
+							"pets5 travel8 cycling3 travel4 travel2"
+							". travel5 travel3 pets2 .";
+	}
+	.travelWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: "travel1 travel2 travel3 travel8 travel7" ". travel4 travel5 travel6 .";
+	}
+	.petsWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: "pets1 pets2 pets3 pets6 pets5" ". . pets4 . .";
+	}
+	.cyclingWraper{
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: "cycling1 cycling2 cycling3 cycling4";
+	}
 	/* Outer conteiner for image and text */
 	.outer{
 		flex-basis: 30%;
