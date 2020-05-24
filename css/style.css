@@ -52,7 +52,6 @@ body{
 }
 #rinat img:hover{
 	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-	border-radius: 50%;
 }
 #rinat img{
 	transition: .5s;
@@ -87,7 +86,7 @@ body{
     width: 40px;
 }
 
-/* Style beheviar of X on hover */
+/* Style behavior of X on hover */
 .is-active:hover .hamburger-inner{
     transform: rotate(-45deg);	/* Rotate -45deg on hover */
     transform-origin: 50% 50%;	/* Make stay in center */
@@ -145,6 +144,7 @@ body{
     bottom: 0;					/* Move to bottom */
     transform: rotate(90deg); 	/* Rotate to \ position */
 }
+
 /* Styling navigation */
 ul{
 	position: fixed;		/* Stay on top of all content in fixed position*/
@@ -170,7 +170,7 @@ ul::after{
 li{
 	text-align:center;				/* Position in the middle */
 	font-size: calc(2vh + 20px);	/* Responsive font size */
-	font-weight: 777;				/* Bold font */
+	font-weight: 700;				/* Bold font */
 	text-transform:uppercase;
 }
 /* Style links */
@@ -187,7 +187,7 @@ a:hover,  a:active, .active {
 
 /*Styling Home page handwriting text*/
 #sticky{
-	height:300vh;
+	height:100vh;
 }
 #sticky svg{
 	position:fixed;
@@ -259,19 +259,17 @@ footer div a:nth-child(7) svg:hover {
 	fill: #ec8b5e;
 }
 
-/* Styling scroll down animated arrow */
+/* Styling scroll down animated arrow on home page*/
 .container {
 	position: fixed;
-	bottom: 10%;
+	bottom: 20px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 28px;
 	height: 70px;
 	cursor: pointer;
-	
+	transition: bottom 2s ease;
 }
-
-
 .chevron {
 	position: absolute;
 	width: 28px;
@@ -280,17 +278,12 @@ footer div a:nth-child(7) svg:hover {
 	transform: scale3d(0.5, 0.5, 0.5);
 	animation: move 3s ease-out infinite;
 }
-
-
 .chevron:first-child {
 	animation: move 3s ease-out 1s infinite;
 }
-
 .chevron:nth-child(2) {
 	animation: move 3s ease-out 2s infinite;
 }
-
-
 .chevron:before,
 .chevron:after {
 	content: ' ';
@@ -320,20 +313,19 @@ footer div a:nth-child(7) svg:hover {
 
 @keyframes move {
 	25% {
-	opacity: 1;
-
+		opacity: 1;
 	}
 	33% {
-	opacity: 1;
-	transform: translateY(30px);
+		opacity: 1;
+		transform: translateY(30px);
 	}
 	67% {
-	opacity: 1;
-	transform: translateY(40px);
+		opacity: 1;
+		transform: translateY(40px);
 	}
 	100% {
-	opacity: 0;
-	transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+		opacity: 0;
+		transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
 	}
 }
 
@@ -349,7 +341,6 @@ footer div a:nth-child(7) svg:hover {
 .fa-arrow-up path{
 	fill:#707070;
 	transition: fill 1s ease;
-
 }
 .fa-arrow-up:hover path{
 	fill:#000;
@@ -383,6 +374,7 @@ footer div a:nth-child(7) svg:hover {
 	left: 0;
 }
 .date p{
+	font-size: 0.75em;
 	margin: 0;
 	display: block;
 	padding: 5px;
@@ -463,7 +455,6 @@ footer div a:nth-child(7) svg:hover {
 	
 }
 .control h3:hover, .selected{
-	/* box-shadow: 15px 15px 7px rgba(222, 222, 222, 0.85); */
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     color: orangered;
 }
@@ -539,7 +530,7 @@ footer div a:nth-child(7) svg:hover {
 }
 
 
-
+/* Internet Explorer support */
 #travel1{grid-area: travel1;
 	-ms-grid-column: 1;
 	-ms-grid-row: 1;
@@ -773,7 +764,6 @@ input[type=submit]:hover {
 	.all{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-areas: "travel1 cycling1 pets3"
 							"cycling2 pets4 travel6"
 							"pets5 travel8 cycling3"
@@ -785,21 +775,18 @@ input[type=submit]:hover {
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-areas: "travel1 travel2 travel3" "travel4 travel5 travel6" "travel7 . travel8";
 	}
 	.petsWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-areas: "pets1 pets2 pets3" "pets4 pets5 pets6";
 	}
 	.cyclingWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-areas: "cycling1 cycling2 cycling3" ". cycling4  .";
 	}
 	/* Styling logo */
@@ -860,7 +847,6 @@ input[type=submit]:hover {
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr;
 		grid-template-areas: "travel1 cycling1 pets3 cycling4"
 							"cycling2 pets4 travel6 pets1"
 							"pets5 travel8 cycling3 travel4"
@@ -871,21 +857,18 @@ input[type=submit]:hover {
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr;
 		grid-template-areas: "travel1 travel2 travel3 travel8" "travel4 travel5 travel6 travel7";
 	}
 	.petsWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr;
 		grid-template-areas: "pets1 pets2 pets3 pets6" ". pets4 pets5 .";
 	}
 	.cyclingWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr;
 		grid-template-areas: "cycling1 cycling2 cycling3 cycling4";
 	}
 	/* Styling image container */
@@ -939,7 +922,6 @@ input[type=submit]:hover {
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "travel1 cycling1 pets3 cycling4 pets6"
 							"cycling2 pets4 travel6 pets1 travel7"
 							"pets5 travel8 cycling3 travel4 travel2"
@@ -949,21 +931,18 @@ input[type=submit]:hover {
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "travel1 travel2 travel3 travel8 travel7" ". travel4 travel5 travel6 .";
 	}
 	.petsWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "pets1 pets2 pets3 pets6 pets5" ". . pets4 . .";
 	}
 	.cyclingWraper{
 		display: grid;
 		display: -ms-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "cycling1 cycling2 cycling3 cycling4";
 	}
 	/* Outer conteiner for image and text */
