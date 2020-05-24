@@ -2,7 +2,6 @@
 
 $(document).ready(function(){
     // Click on arrow down on main page
-    if (document.location.href.match(/[^\/]+$/)[0] == 'index.html'){
         var $doc = $(document), $win = $(window);
         var $svg = $('#sticky svg').drawsvg();
         $('.container').click(function(){    
@@ -17,5 +16,4 @@ $(document).ready(function(){
             $(window).off('scroll');
         });
     
-    };
 });
