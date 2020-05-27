@@ -15,7 +15,7 @@ body{
 
 /* Styling logo */
 #logo{
-	position: fixed;
+	position: absolute;
 	top: 8px;
 	left: 20px;
 	width: 48px;

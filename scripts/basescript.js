@@ -33,7 +33,7 @@ $(document).ready(function(){
 	$(".fa-arrow-up").click(function() {
 		$('html, body').animate({
 			scrollTop: $("body").offset().top
-		}, 3000);
+		}, 1000);
     });
     
 	// Animate image in container on hover
