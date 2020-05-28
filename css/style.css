@@ -749,6 +749,12 @@ input[type=submit]:hover {
 	border-radius: 15px;
 }
 
+/* Styling p tags of About page */
+.hobby ~ p{
+	text-align: left;
+	margin: 0 10vw;
+}
+
 /* Styling for tablet and desktop versions */
 @media only screen and (min-width: 360px){
 	/* Styling youtube video */
