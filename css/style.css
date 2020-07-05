@@ -3,7 +3,6 @@
 
 /* Styling body */
 body{
-	position: relative;
 	margin:0;		
 	font-family: "Rufina", serif;	/* Define font */
 	font-size:20px;
@@ -34,7 +33,7 @@ body{
 	opacity:0;
 	font-size: 30px;
 	animation: fill 1s ease forwards;
-	padding: 20px 0;
+	padding: 55px 0 20px 0;
 }
 
 @keyframes fill{
@@ -203,7 +202,7 @@ a:hover,  a:active, .active {
 /* Footer styling */
 footer{
 	text-align: center; 	/* aling icons in the middle */
-	padding-bottom: 5vh;
+	padding: 5vh 0;
 }
 /* Styling footer social media icons */
 footer div a {
@@ -418,6 +417,11 @@ footer div a:nth-child(7) svg:hover {
 	background: url(../images/finkglas360.jpg) no-repeat;
 	background-size: 100%;
 }
+/* Adding calculator image */
+#calculator{
+	background: url(../images/calculator360.jpg) no-repeat;
+	background-size: 100%;
+}
 
 /* Class adding on hover by JS */
 .inner-img-up{
@@ -462,7 +466,8 @@ footer div a:nth-child(7) svg:hover {
 .control{
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-around;
+	justify-content: space-around;
+	padding: 5vh 0;
 }
 #wraper{
     overflow: hidden;
@@ -689,7 +694,7 @@ main{
 .container-form:hover {
 	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
 }
-label:not(:nth-child(5))::after{
+label:not(:nth-child(3))::after{
 	content: " *";
 	color: red;
 }
@@ -752,7 +757,7 @@ input[type=submit]:hover {
 /* Styling p tags of About page */
 .hobby ~ p{
 	text-align: left;
-	margin: 0 10vw;
+	margin: 3vh 10vw;
 }
 
 /* Styling for tablet and desktop versions */
@@ -826,6 +831,11 @@ input[type=submit]:hover {
 	/* Adding finkglas image */
 	#finkglas{
 		background: url(../images/finkglas.jpg) no-repeat;
+		background-size: 100%;
+	}
+	/* Adding calculator image */
+	#calculator{
+		background: url(../images/calculator.jpg) no-repeat;
 		background-size: 100%;
 	}
 }

@@ -164,3 +164,15 @@ function cyclingShow(){
     $('.cycling').each(function(){$(this).css({'transform':'scale(' + 1 + ')'})});
 };
 // End script for about page gallery
+
+//reCaptcha function
+$('#myButton').click(function (event) {
+    event.preventDefault();
+    grecaptcha.reset();
+    grecaptcha.execute();
+});
+
+function onSubmit(token) {
+    document.getElementById("contactForm").submit();
+}
+
